@@ -74,3 +74,10 @@ app.post('/bfhl', (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+app.get('/', (req, res) => {
+  res.send('Welcome to the BFHL API! Send a POST request to /bfhl with JSON data.');
+});
+app.get('/bfhl', (req, res) => {
+  res.send('BFHL API Endpoint: Use a POST request to /bfhl with JSON data.');
+});
